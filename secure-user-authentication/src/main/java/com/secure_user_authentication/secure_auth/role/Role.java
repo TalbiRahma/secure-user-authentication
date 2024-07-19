@@ -25,7 +25,7 @@ public class Role {
     private String name;
 
     @ManyToMany(mappedBy = "roles")
-    private List<User> user;
+    private List<User> users;
 
     @CreatedDate
     @Column(nullable = false, updatable = false)
