@@ -21,6 +21,8 @@ public class AuthenticationSerice {
     private final PasswordEncoder passwordEncoder;
     private final UserRepository userRepository;
     private final TokenRepository tokenRepository;
+    private final EmailService emailService;
+
     public void register(RegistrationRequest request) {
         var userRole = roleRepository.findByName("USER")
                 // todo - better exception handling
